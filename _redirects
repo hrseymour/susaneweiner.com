@@ -1,0 +1,11 @@
+# Redirects from old Wix paths to new clean URLs.
+/about-5                              /about.html                           301
+/contact-8-1                          /contact.html                         301
+/developmental-editing                /developmental-editing.html           301
+/honorific-awards-nomination-strategies   /honorific-awards.html            301
+/single-project                       /projects.html                        301
+
+# Wix template artifacts that don't have a corresponding new page
+/general-1                            /developmental-editing.html           301
+/general-5-1                          /                                     301
+/general-5-2                          /                                     301

@@ -1,0 +1,22 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Node (if a build step ever gets added)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local server / preview
+*.log
+.cache/
+dist/
+.tmp/
+
+# Cloudflare Wrangler local state (if used later)
+.wrangler/
