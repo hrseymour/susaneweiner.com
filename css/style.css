@@ -721,3 +721,88 @@ section { padding: var(--space-6) 0; position: relative; }
   background: var(--color-ink);
   color: var(--color-bg);
 }
+
+/* ============================================================
+   Portrait blocks
+   ============================================================ */
+
+/* About page: portrait next to intro paragraph.
+   Stacks on mobile, side-by-side on desktop. */
+.portrait-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  align-items: start;
+}
+
+.portrait-block__text {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.portrait-block__text p { margin: 0; }
+
+.portrait {
+  display: block;
+  margin: 0 auto;
+  max-width: 18rem;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  /* warm tint frame: a hairline rule with a tiny inset shadow keeps it
+     anchored without feeling boxed-in */
+  box-shadow:
+    0 0 0 1px var(--color-rule),
+    0 6px 24px -10px rgba(26, 22, 20, 0.18);
+}
+
+@media (min-width: 720px) {
+  .portrait-block {
+    grid-template-columns: 16rem 1fr;
+    gap: var(--space-4);
+  }
+  .portrait { margin: 0; max-width: 100%; }
+}
+
+/* Home page: portrait alongside Susan's pull-quote.
+   Photo to the left on desktop, stacked above on mobile. */
+.statement__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.statement__portrait {
+  display: block;
+  max-width: 13rem;
+  margin: 0 auto var(--space-2);
+}
+
+.statement__portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  box-shadow:
+    0 0 0 1px var(--color-rule),
+    0 6px 24px -10px rgba(26, 22, 20, 0.18);
+}
+
+@media (min-width: 760px) {
+  .statement__inner {
+    grid-template-columns: 14rem 1fr;
+    gap: var(--space-5);
+  }
+  .statement__portrait { margin: 0; max-width: 100%; }
+  /* When the quote sits next to the portrait, scale it back slightly so
+     it doesn't dominate the composition. */
+  .statement__inner .statement__text {
+    font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  }
+}
